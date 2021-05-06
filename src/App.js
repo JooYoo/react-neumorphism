@@ -1,9 +1,10 @@
 import './App.css';
+import ButtonIsolation from './components/00_ButtonIsolation/ButtonIsolation';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">App Start</header>
+      <ButtonIsolation />
     </div>
   );
 }
