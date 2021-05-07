@@ -4,7 +4,7 @@ import ButtonIsolation from './components/00_ButtonIsolation/ButtonIsolation';
 function App() {
   return (
     <div className="App">
-      <ButtonIsolation />
+      <ButtonIsolation round />
     </div>
   );
 }

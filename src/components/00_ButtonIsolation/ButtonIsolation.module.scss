@@ -1,23 +1,9 @@
 .host {
   position: relative;
   padding: 2rem;
-
-  // TODO: attr: round
   border-radius: 20%;
-
-  // TODO: attr: border
   border: 2px solid rgba(255, 255, 255, 0.5);
-
-  // button-flat
   background-color: unset;
-
-  // FIXME: convex
-  //   background: linear-gradient(
-  //     145deg,
-  //     rgba(255, 255, 255, 1),
-  //     rgba(215, 214, 214, 1)
-  //   );
-
   box-shadow: 3px 3px 5px rgba(180, 180, 180, 1),
     -2px -2px 10px rgba(255, 255, 255, 1);
 
@@ -41,4 +27,37 @@
 
   font-size: 2rem;
   color: rgba(0, 0, 0, 0.7);
+}
+
+// variant
+.var {
+  &__shape--round {
+    border-radius: 50%;
+  }
+
+  &__shape--rhombus {
+    transform: rotate(45deg);
+
+    .txt {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__shape--convex {
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 1),
+      rgba(215, 215, 215, 1)
+    );
+  }
+
+  &__border--thick {
+    border: 4px solid rgba(240, 240, 240, 1);
+
+    &:active {
+      border-color: rgba(240, 240, 240, 1);
+      box-shadow: inset 3px 3px 5px rgba(180, 180, 180, 1),
+        inset -2px -2px 10px rgba(220, 220, 220, 1);
+    }
+  }
 }
