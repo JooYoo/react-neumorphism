@@ -1,5 +1,9 @@
 .host {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: 2rem;
   border-radius: 20%;
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -29,6 +33,10 @@
   color: rgba(0, 0, 0, 0.7);
 }
 
+.icon {
+  position: absolute;
+}
+
 // variant
 .var {
   &__shape--round {
@@ -40,6 +48,10 @@
 
     .txt {
       transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .icon {
+      transform: rotate(-45deg);
     }
   }
 
