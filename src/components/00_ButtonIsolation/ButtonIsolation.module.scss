@@ -37,6 +37,54 @@
   position: absolute;
 }
 
+// size
+.size {
+  &--s {
+    padding: 1rem;
+
+    .txt {
+      font-size: 1rem;
+    }
+
+    .icon {
+      svg {
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+  }
+
+  &--m {
+    padding: 2rem;
+
+    .txt {
+      font-size: 2rem;
+    }
+
+    .icon {
+      svg {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+  }
+
+  &--l {
+    padding: 3rem;
+
+    .txt {
+      font-size: 3rem;
+    }
+
+    .icon {
+      svg {
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+  }
+}
+
 // variant
 .var {
   &__shape--round {

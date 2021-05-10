@@ -2,7 +2,17 @@ import React from 'react';
 import style from './ButtonIsolation.module.scss';
 
 const ButtonIsolation = (props) => {
-  const { text, round, rhombus, thickBorder, convex, children } = props;
+  const {
+    small,
+    middle,
+    large,
+    text,
+    round,
+    rhombus,
+    thickBorder,
+    convex,
+    children,
+  } = props;
 
   // attribute
   const isRound = round ? 'var__shape--round' : '';
@@ -10,9 +20,21 @@ const ButtonIsolation = (props) => {
   const isThickBorder = thickBorder ? 'var__border--thick' : '';
   const isConvex = convex ? 'var__shape--convex' : '';
 
+  // btn size
+  const isSmall = small ? 'size--s' : '';
+  const isMiddle = middle ? 'size--m' : '';
+  const isLarge = large ? 'size--l' : '';
+
   return (
     <button
-      className={`${style['host']} ${style[isRound]} ${style[isRhombus]} ${style[isConvex]} ${style[isThickBorder]}`}
+      className={`${style['host']} 
+                  ${style[isSmall]} 
+                  ${style[isMiddle]} 
+                  ${style[isLarge]} 
+                  ${style[isRound]} 
+                  ${style[isRhombus]} 
+                  ${style[isConvex]} 
+                  ${style[isThickBorder]}`}
     >
       <span className={style.txt}>{text}</span>
       <span className={style.icon}>{children}</span>
@@ -29,7 +51,7 @@ export default ButtonIsolation;
 // [x] attr: border
 // [x] props: icon
 // [x] props: icon size/color
-// [ ] props: button size: small regular large
-// [ ] props: txt size
-// [ ] props: txt font-size
+// [x] props: button size: small regular large
+// [x] props: txt size: small regular large
+// [x] props: icon size: small regular large
 // [ ] save scss-var extra

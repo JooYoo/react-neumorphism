@@ -5,9 +5,7 @@ import ButtonIsolation from './components/00_ButtonIsolation/ButtonIsolation';
 function App() {
   return (
     <div className="App">
-      <ButtonIsolation>
-        <SiNintendoswitch size={'1.5rem'} />
-      </ButtonIsolation>
+      <ButtonIsolation text={'H'}>{/* <SiNintendoswitch /> */}</ButtonIsolation>
     </div>
   );
 }
