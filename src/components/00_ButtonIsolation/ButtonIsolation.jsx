@@ -43,15 +43,3 @@ const ButtonIsolation = (props) => {
 };
 
 export default ButtonIsolation;
-
-// TODO:
-// [x] add neu-effect
-// [x] use rem as global size
-// [x] attr: round normal
-// [x] attr: border
-// [x] props: icon
-// [x] props: icon size/color
-// [x] props: button size: small regular large
-// [x] props: txt size: small regular large
-// [x] props: icon size: small regular large
-// [ ] save scss-var extra

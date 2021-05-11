@@ -1,24 +1,47 @@
+@import '../../share/sass/global_var';
+
+$btn-isolation__size--s: 0.25 * $unit__rem; // 1rem
+$btn-isolation__size--m: 0.5 * $unit__rem; // 2rem
+$btn-isolation__size--l: 0.75 * $unit__rem; // 3rem
+
+$btn-isolation__border-color--enable: rgba(96, 125, 139, 0.1);
+$btn-isolation__border-color--active: rgba(240, 240, 240, 0.5);
+$btn-isolation__bg-color--active: rgba(235, 235, 235, 1);
+$btn-isolation__convex-gradient-color--1: $color__light--100;
+$btn-isolation__convex-gradient-color--2: rgba(215, 215, 215, 1);
+
+$btn-isolation__border--normal: (0.5 * $unit__px) solid
+  $btn-isolation__border-color--enable; // 2px
+$btn-isolation__border--thick: $unit__px solid
+  $btn-isolation__border-color--enable; // 4px
+
+$btn-isolation__convex-gradient: linear-gradient(
+  145deg,
+  $btn-isolation__convex-gradient-color--1,
+  $btn-isolation__convex-gradient-color--2
+);
+
 .host {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 2rem;
-  border-radius: 20%;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: $btn-isolation__size--m;
+  border-radius: $border-radius--round-corner;
+  border: $btn-isolation__border--normal;
   background-color: unset;
-  box-shadow: 3px 3px 5px rgba(180, 180, 180, 1),
-    -2px -2px 10px rgba(255, 255, 255, 1);
+  box-shadow: $shadow-offset__right-bottom $color__shadow--1,
+    $shadow-offset__left-top $color__shadow--3;
 
   &:active {
-    border-color: rgba(235, 235, 235, 1);
-    background-color: rgba(235, 235, 235, 1);
-    box-shadow: inset 3px 3px 5px rgba(180, 180, 180, 1),
-      inset -2px -2px 10px rgba(255, 255, 255, 1);
+    border-color: $btn-isolation__border-color--active;
+    background-color: $btn-isolation__bg-color--active;
+    box-shadow: inset $shadow-offset__right-bottom $color__shadow--1,
+      inset $shadow-offset__left-top $color__shadow--3;
 
     .txt {
-      color: rgba(0, 0, 0, 1);
+      color: $color__dark--100;
     }
   }
 }
@@ -29,8 +52,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: 2rem;
-  color: rgba(0, 0, 0, 0.7);
+  font-size: $btn-isolation__size--m;
+  color: $color__dark--70;
 }
 
 .icon {
@@ -40,46 +63,46 @@
 // size
 .size {
   &--s {
-    padding: 1rem;
+    padding: $btn-isolation__size--s;
 
     .txt {
-      font-size: 1rem;
+      font-size: $btn-isolation__size--s;
     }
 
     .icon {
       svg {
-        height: 1rem;
-        width: 1rem;
+        height: $btn-isolation__size--s;
+        width: $btn-isolation__size--s;
       }
     }
   }
 
   &--m {
-    padding: 2rem;
+    padding: $btn-isolation__size--m;
 
     .txt {
-      font-size: 2rem;
+      font-size: $btn-isolation__size--m;
     }
 
     .icon {
       svg {
-        height: 2rem;
-        width: 2rem;
+        height: $btn-isolation__size--m;
+        width: $btn-isolation__size--m;
       }
     }
   }
 
   &--l {
-    padding: 3rem;
+    padding: $btn-isolation__size--l;
 
     .txt {
-      font-size: 3rem;
+      font-size: $btn-isolation__size--l;
     }
 
     .icon {
       svg {
-        height: 3rem;
-        width: 3rem;
+        height: $btn-isolation__size--l;
+        width: $btn-isolation__size--l;
       }
     }
   }
@@ -88,7 +111,7 @@
 // variant
 .var {
   &__shape--round {
-    border-radius: 50%;
+    border-radius: $border-radius--eclipse;
   }
 
   &__shape--rhombus {
@@ -104,20 +127,30 @@
   }
 
   &__shape--convex {
-    background: linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 1),
-      rgba(215, 215, 215, 1)
-    );
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $btn-isolation__convex-gradient;
+    }
+
+    &:active {
+      &::before {
+        content: none;
+      }
+    }
   }
 
   &__border--thick {
-    border: 4px solid rgba(240, 240, 240, 1);
+    border: $btn-isolation__border--thick;
 
     &:active {
-      border-color: rgba(240, 240, 240, 1);
-      box-shadow: inset 3px 3px 5px rgba(180, 180, 180, 1),
-        inset -2px -2px 10px rgba(220, 220, 220, 1);
+      border-color: $btn-isolation__border-color--active;
+      box-shadow: inset $shadow-offset__right-bottom $color__shadow--1,
+        inset $shadow-offset__left-top $color__shadow--2;
     }
   }
 }
