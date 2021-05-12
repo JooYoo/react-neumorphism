@@ -1,0 +1,29 @@
+@import '../../share/sass/global_var';
+
+$btn__size--s: 0.25 * $unit__rem; // 1rem
+$btn__size--m: 0.5 * $unit__rem; // 2rem
+$btn__size--l: 0.75 * $unit__rem; // 3rem
+
+.host {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: $btn__size--m;
+  border-radius: $border-radius--round-corner;
+  border: $border--normal;
+  background-color: unset;
+  box-shadow: $shadow-offset__right-bottom $color__shadow--1,
+    $shadow-offset__left-top $color__shadow--3;
+}
+
+.txt {
+  //   position: absolute;
+  //   left: 50%;
+  //   top: 50%;
+  //   transform: translate(-50%, -50%);
+
+  font-size: $btn__size--m;
+  color: $color__dark--70;
+}

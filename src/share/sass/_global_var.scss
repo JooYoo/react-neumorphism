@@ -2,6 +2,10 @@ $unit__px: 4px;
 $unit__rem: 4rem;
 $unit__percent: 4%;
 
+$size--s: 0.25 * $unit__rem; // 1rem
+$size--m: 0.5 * $unit__rem; // 2rem
+$size--l: 0.75 * $unit__rem; // 3rem
+
 $color__light--50: rgba(255, 255, 255, 0.5);
 $color__light--100: rgba(255, 255, 255, 1);
 $color__dark--70: rgba(0, 0, 0, 0.7);
@@ -9,9 +13,19 @@ $color__dark--100: rgba(0, 0, 0, 1);
 $color__shadow--1: rgba(180, 180, 180, 1);
 $color__shadow--2: rgba(220, 220, 220, 1);
 $color__shadow--3: $color__light--100;
+$color__border--enable: rgba(96, 125, 139, 0.1);
 
 $shadow-offset__right-bottom: 3px 3px 5px;
 $shadow-offset__left-top: -2px -2px 10px;
 
-$border-radius--round-corner: 5 * $unit__percent; // 20%
+$border-radius--round-corner: 0.25 * $unit__rem; // 1rem
 $border-radius--eclipse: 12.5 * $unit__percent; // 50%
+
+$border--normal: (0.5 * $unit__px) solid $color__border--enable; // 2px
+$border--thick: $unit__px solid $color__border--enable; //4px
+
+/* -------------------------------------------------------------------------- */
+/*                                   button                                   */
+/* -------------------------------------------------------------------------- */
+$btn__border-color--active: rgba(240, 240, 240, 0.5);
+$btn__bg-color--active: rgba(235, 235, 235, 1);

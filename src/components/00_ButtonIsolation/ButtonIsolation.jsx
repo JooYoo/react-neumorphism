@@ -12,6 +12,7 @@ const ButtonIsolation = (props) => {
     thickBorder,
     convex,
     children,
+    onClick,
   } = props;
 
   // attribute
@@ -35,6 +36,7 @@ const ButtonIsolation = (props) => {
                   ${style[isRhombus]} 
                   ${style[isConvex]} 
                   ${style[isThickBorder]}`}
+      onClick={onClick}
     >
       <span className={style.txt}>{text}</span>
       <span className={style.icon}>{children}</span>

@@ -1,20 +1,8 @@
 @import '../../share/sass/global_var';
+@import '../../share/sass/global_mixin';
 
-$btn-isolation__size--s: 0.25 * $unit__rem; // 1rem
-$btn-isolation__size--m: 0.5 * $unit__rem; // 2rem
-$btn-isolation__size--l: 0.75 * $unit__rem; // 3rem
-
-$btn-isolation__border-color--enable: rgba(96, 125, 139, 0.1);
-$btn-isolation__border-color--active: rgba(240, 240, 240, 0.5);
-$btn-isolation__bg-color--active: rgba(235, 235, 235, 1);
 $btn-isolation__convex-gradient-color--1: $color__light--100;
 $btn-isolation__convex-gradient-color--2: rgba(215, 215, 215, 1);
-
-$btn-isolation__border--normal: (0.5 * $unit__px) solid
-  $btn-isolation__border-color--enable; // 2px
-$btn-isolation__border--thick: $unit__px solid
-  $btn-isolation__border-color--enable; // 4px
-
 $btn-isolation__convex-gradient: linear-gradient(
   145deg,
   $btn-isolation__convex-gradient-color--1,
@@ -22,23 +10,15 @@ $btn-isolation__convex-gradient: linear-gradient(
 );
 
 .host {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // positioning: center elements
+  @include center-stuff('flex', true);
 
-  padding: $btn-isolation__size--m;
-  border-radius: $border-radius--round-corner;
-  border: $btn-isolation__border--normal;
-  background-color: unset;
-  box-shadow: $shadow-offset__right-bottom $color__shadow--1,
-    $shadow-offset__left-top $color__shadow--3;
+  // neu button style: default
+  @include neu-ele-types('flat');
 
   &:active {
-    border-color: $btn-isolation__border-color--active;
-    background-color: $btn-isolation__bg-color--active;
-    box-shadow: inset $shadow-offset__right-bottom $color__shadow--1,
-      inset $shadow-offset__left-top $color__shadow--3;
+    // neu button style: pressing
+    @include neu-ele-types('concave');
 
     .txt {
       color: $color__dark--100;
@@ -47,12 +27,13 @@ $btn-isolation__convex-gradient: linear-gradient(
 }
 
 .txt {
+  // TODO: use mixin
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 
-  font-size: $btn-isolation__size--m;
+  font-size: $size--m;
   color: $color__dark--70;
 }
 
@@ -60,55 +41,61 @@ $btn-isolation__convex-gradient: linear-gradient(
   position: absolute;
 }
 
-// size
+/* -------------------------------------------------------------------------- */
+/*                                    size                                    */
+/* -------------------------------------------------------------------------- */
+
 .size {
   &--s {
-    padding: $btn-isolation__size--s;
+    padding: $size--s;
 
     .txt {
-      font-size: $btn-isolation__size--s;
+      font-size: $size--s;
     }
 
     .icon {
       svg {
-        height: $btn-isolation__size--s;
-        width: $btn-isolation__size--s;
+        height: $size--s;
+        width: $size--s;
       }
     }
   }
 
   &--m {
-    padding: $btn-isolation__size--m;
+    padding: $size--m;
 
     .txt {
-      font-size: $btn-isolation__size--m;
+      font-size: $size--m;
     }
 
     .icon {
       svg {
-        height: $btn-isolation__size--m;
-        width: $btn-isolation__size--m;
+        height: $size--m;
+        width: $size--m;
       }
     }
   }
 
   &--l {
-    padding: $btn-isolation__size--l;
+    padding: $size--l;
 
     .txt {
-      font-size: $btn-isolation__size--l;
+      font-size: $size--l;
     }
 
     .icon {
       svg {
-        height: $btn-isolation__size--l;
-        width: $btn-isolation__size--l;
+        height: $size--l;
+        width: $size--l;
       }
     }
   }
 }
 
-// variant
+/* -------------------------------------------------------------------------- */
+/*                                   variant                                  */
+/* -------------------------------------------------------------------------- */
+
 .var {
   &__shape--round {
     border-radius: $border-radius--eclipse;
@@ -145,10 +132,10 @@ $btn-isolation__convex-gradient: linear-gradient(
   }
 
   &__border--thick {
-    border: $btn-isolation__border--thick;
+    border: $border--thick;
 
     &:active {
-      border-color: $btn-isolation__border-color--active;
+      border-color: $btn__border-color--active;
       box-shadow: inset $shadow-offset__right-bottom $color__shadow--1,
         inset $shadow-offset__left-top $color__shadow--2;
     }
