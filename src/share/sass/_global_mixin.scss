@@ -1,6 +1,6 @@
 @import './global_var';
 
-@mixin center-stuff($approach, $isContainingBlock) {
+@mixin center-ele($approach, $isContainingBlock) {
   @if ($isContainingBlock) {
     position: relative;
   }
@@ -17,20 +17,42 @@
   }
 }
 
-// TODO:
-// [ ] refactoring vars
-@mixin neu-ele-types($type) {
+@mixin neu-ele($type) {
   @if ($type == 'flat') {
-    padding: $size--m;
     border-radius: $border-radius--round-corner;
-    border: $border--normal;
-    background-color: unset;
-    box-shadow: $shadow-offset__right-bottom $color__shadow--1,
-      $shadow-offset__left-top $color__shadow--3;
+    padding: $size--m;
+    border: $neu-ele__border--flat;
+    background-color: $neu-ele__bg-color--flat;
+    box-shadow: $neu-ele__shadow--flat;
   } @else if($type == 'concave') {
-    border-color: $btn__border-color--active;
-    background-color: $btn__bg-color--active;
-    box-shadow: inset $shadow-offset__right-bottom $color__shadow--1,
-      inset $shadow-offset__left-top $color__shadow--3;
+    border: $neu-ele__border--concave;
+    background-color: $neu-ele__bg-color--concave;
+    box-shadow: $neu-ele__shadow--concave;
+  } @else if($type == 'convex') {
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $neu-ele__gradient--convex;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   button                                   */
+/* -------------------------------------------------------------------------- */
+
+@mixin btn-txt-icon__size($size) {
+  padding: $size;
+
+  .txt {
+    font-size: $size;
+  }
+
+  .icon svg {
+    height: $size;
+    width: $size;
   }
 }

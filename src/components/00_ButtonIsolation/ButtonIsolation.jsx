@@ -9,7 +9,7 @@ const ButtonIsolation = (props) => {
     text,
     round,
     rhombus,
-    thickBorder,
+    thick,
     convex,
     children,
     onClick,
@@ -18,7 +18,7 @@ const ButtonIsolation = (props) => {
   // attribute
   const isRound = round ? 'var__shape--round' : '';
   const isRhombus = rhombus ? 'var__shape--rhombus' : '';
-  const isThickBorder = thickBorder ? 'var__border--thick' : '';
+  const isThick = thick ? 'var__border--thick' : '';
   const isConvex = convex ? 'var__shape--convex' : '';
 
   // btn size
@@ -35,7 +35,7 @@ const ButtonIsolation = (props) => {
                   ${style[isRound]} 
                   ${style[isRhombus]} 
                   ${style[isConvex]} 
-                  ${style[isThickBorder]}`}
+                  ${style[isThick]}`}
       onClick={onClick}
     >
       <span className={style.txt}>{text}</span>

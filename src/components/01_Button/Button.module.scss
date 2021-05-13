@@ -12,10 +12,10 @@ $btn__size--l: 0.75 * $unit__rem; // 3rem
 
   padding: $btn__size--m;
   border-radius: $border-radius--round-corner;
-  border: $border--normal;
+  border: $neu-ele__border--flat;
   background-color: unset;
-  box-shadow: $shadow-offset__right-bottom $color__shadow--1,
-    $shadow-offset__left-top $color__shadow--3;
+  box-shadow: $neu-shadow__offset--right-bottom $color__shadow--1,
+    $neu-shadow__offset--left-top $color__shadow--3;
 }
 
 .txt {

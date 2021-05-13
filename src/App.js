@@ -6,7 +6,7 @@ import Button from './components/01_Button/Button';
 function App() {
   return (
     <div className="App">
-      <ButtonIsolation text={'H'} large thickBorder>
+      <ButtonIsolation text={'H'} large>
         {/* <SiNintendoswitch /> */}
       </ButtonIsolation>
 

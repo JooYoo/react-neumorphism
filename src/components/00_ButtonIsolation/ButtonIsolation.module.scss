@@ -1,24 +1,14 @@
 @import '../../share/sass/global_var';
 @import '../../share/sass/global_mixin';
 
-$btn-isolation__convex-gradient-color--1: $color__light--100;
-$btn-isolation__convex-gradient-color--2: rgba(215, 215, 215, 1);
-$btn-isolation__convex-gradient: linear-gradient(
-  145deg,
-  $btn-isolation__convex-gradient-color--1,
-  $btn-isolation__convex-gradient-color--2
-);
-
 .host {
-  // positioning: center elements
-  @include center-stuff('flex', true);
-
-  // neu button style: default
-  @include neu-ele-types('flat');
+  @include center-ele('flex', true);
+  // neu-ele: default
+  @include neu-ele('flat');
 
   &:active {
-    // neu button style: pressing
-    @include neu-ele-types('concave');
+    // neu-ele: pressing
+    @include neu-ele('concave');
 
     .txt {
       color: $color__dark--100;
@@ -27,18 +17,13 @@ $btn-isolation__convex-gradient: linear-gradient(
 }
 
 .txt {
-  // TODO: use mixin
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
+  @include center-ele('absolute', false);
   font-size: $size--m;
   color: $color__dark--70;
 }
 
 .icon {
-  position: absolute;
+  @include center-ele('absolute', false);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -47,48 +32,15 @@ $btn-isolation__convex-gradient: linear-gradient(
 
 .size {
   &--s {
-    padding: $size--s;
-
-    .txt {
-      font-size: $size--s;
-    }
-
-    .icon {
-      svg {
-        height: $size--s;
-        width: $size--s;
-      }
-    }
+    @include btn-txt-icon__size($size--s);
   }
 
   &--m {
-    padding: $size--m;
-
-    .txt {
-      font-size: $size--m;
-    }
-
-    .icon {
-      svg {
-        height: $size--m;
-        width: $size--m;
-      }
-    }
+    @include btn-txt-icon__size($size--m);
   }
 
   &--l {
-    padding: $size--l;
-
-    .txt {
-      font-size: $size--l;
-    }
-
-    .icon {
-      svg {
-        height: $size--l;
-        width: $size--l;
-      }
-    }
+    @include btn-txt-icon__size($size--l);
   }
 }
 
@@ -114,15 +66,7 @@ $btn-isolation__convex-gradient: linear-gradient(
   }
 
   &__shape--convex {
-    overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: $btn-isolation__convex-gradient;
-    }
+    @include neu-ele('convex');
 
     &:active {
       &::before {
@@ -132,12 +76,11 @@ $btn-isolation__convex-gradient: linear-gradient(
   }
 
   &__border--thick {
-    border: $border--thick;
+    border: $neu-ele__border--flat-thick;
 
     &:active {
-      border-color: $btn__border-color--active;
-      box-shadow: inset $shadow-offset__right-bottom $color__shadow--1,
-        inset $shadow-offset__left-top $color__shadow--2;
+      border: $neu-ele__border--concave-thick;
+      box-shadow: $neu-ele__shadow--concave-thick;
     }
   }
 }
