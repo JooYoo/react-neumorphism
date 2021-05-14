@@ -1,29 +1,94 @@
 @import '../../share/sass/global_var';
-
-$btn__size--s: 0.25 * $unit__rem; // 1rem
-$btn__size--m: 0.5 * $unit__rem; // 2rem
-$btn__size--l: 0.75 * $unit__rem; // 3rem
+@import '../../share/sass/global_mixin';
 
 .host {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center-ele('flex', true);
+  @include neu-ele('flat');
+  padding: (0.5 * $size--m) $size--m;
 
-  padding: $btn__size--m;
-  border-radius: $border-radius--round-corner;
-  border: $neu-ele__border--flat;
-  background-color: unset;
-  box-shadow: $neu-shadow__offset--right-bottom $color__shadow--1,
-    $neu-shadow__offset--left-top $color__shadow--3;
+  &:active {
+    @include neu-ele('concave');
+
+    .txt {
+      color: $color__dark--100;
+    }
+  }
 }
 
 .txt {
-  //   position: absolute;
-  //   left: 50%;
-  //   top: 50%;
-  //   transform: translate(-50%, -50%);
-
-  font-size: $btn__size--m;
+  font-size: $size--m;
   color: $color__dark--70;
+}
+
+.icon {
+  @include btn-icon__size($size--m);
+  padding-inline-end: (0.75 * $size--m);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    size                                    */
+/* -------------------------------------------------------------------------- */
+
+.size {
+  &--s {
+    @include btn-txt__size($size--s);
+    @include btn-icon__size($size--s);
+    &.var {
+      @include btn-text-icon__offset(0.75 * $size--s);
+    }
+    padding: (0.5 * $size--s) $size--s;
+  }
+
+  &--m {
+    @include btn-txt__size($size--m);
+    @include btn-icon__size($size--m);
+    &.var {
+      @include btn-text-icon__offset((0.75 * $size--m));
+    }
+    padding: (0.5 * $size--m) $size--m;
+  }
+
+  &--l {
+    @include btn-txt__size($size--l);
+    @include btn-icon__size($size--l);
+    &.var {
+      @include btn-text-icon__offset(0.75 * $size--l);
+    }
+    padding: (0.5 * $size--l) $size--l;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   variant                                  */
+/* -------------------------------------------------------------------------- */
+
+.var {
+  &__shape--round {
+    border-radius: $border-radius--round;
+  }
+
+  &__shape--convex {
+    @include neu-ele('convex');
+
+    .txt {
+      z-index: 1;
+    }
+
+    &:active {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &__border--thick {
+    border: $neu-ele__border--flat-thick;
+
+    &:active {
+      border: $neu-ele__border--concave-thick;
+      box-shadow: $neu-ele__shadow--concave-thick;
+    }
+  }
+
+  @include btn-text-icon__offset;
 }

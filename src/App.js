@@ -6,12 +6,12 @@ import Button from './components/01_Button/Button';
 function App() {
   return (
     <div className="App">
-      <ButtonIsolation text={'H'} large>
-        {/* <SiNintendoswitch /> */}
-      </ButtonIsolation>
+      <ButtonIsolation text={'H'}>{/* <SiNintendoswitch /> */}</ButtonIsolation>
 
       <div style={{ marginTop: '20px' }}>
-        <Button />
+        <Button text={'lorem'}>
+          <SiNintendoswitch />
+        </Button>
       </div>
     </div>
   );

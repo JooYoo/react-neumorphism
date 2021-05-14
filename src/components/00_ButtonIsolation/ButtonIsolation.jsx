@@ -15,7 +15,7 @@ const ButtonIsolation = (props) => {
     onClick,
   } = props;
 
-  // attribute
+  // var
   const isRound = round ? 'var__shape--round' : '';
   const isRhombus = rhombus ? 'var__shape--rhombus' : '';
   const isThick = thick ? 'var__border--thick' : '';

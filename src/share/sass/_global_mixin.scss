@@ -44,15 +44,32 @@
 /*                                   button                                   */
 /* -------------------------------------------------------------------------- */
 
-@mixin btn-txt-icon__size($size) {
+@mixin btn-txt__size($size) {
   padding: $size;
-
   .txt {
     font-size: $size;
   }
+}
 
-  .icon svg {
+@mixin btn-icon__size($size) {
+  & svg {
     height: $size;
     width: $size;
+  }
+}
+
+@mixin btn-text-icon__offset($size: 0.75 * $size--m) {
+  &__icon-position--start {
+    .icon {
+      padding-inline-end: $size;
+    }
+  }
+
+  &__icon-position--end {
+    flex-direction: row-reverse;
+    .icon {
+      padding-inline-end: unset;
+      padding-inline-start: $size;
+    }
   }
 }
