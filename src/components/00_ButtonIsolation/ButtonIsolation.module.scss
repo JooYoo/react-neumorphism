@@ -1,5 +1,5 @@
-@import '../../share/sass/global_var';
-@import '../../share/sass/global_mixin';
+@import '../share/sass/global_var';
+@import '../share/sass/global_mixin';
 
 .host {
   @include center-ele('flex', true);

@@ -1,5 +1,5 @@
-@import '../../share/sass/global_var';
-@import '../../share/sass/global_mixin';
+@import '../share/sass/global_var';
+@import '../share/sass/global_mixin';
 
 .host {
   @include center-ele('flex', true);
@@ -23,6 +23,10 @@
 .icon {
   @include btn-icon__size($size--m);
   padding-inline-end: (0.75 * $size--m);
+}
+
+.icon--disable {
+  display: none;
 }
 
 /* -------------------------------------------------------------------------- */

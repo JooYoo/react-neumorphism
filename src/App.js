@@ -9,9 +9,7 @@ function App() {
       <ButtonIsolation text={'H'}>{/* <SiNintendoswitch /> */}</ButtonIsolation>
 
       <div style={{ marginTop: '20px' }}>
-        <Button text={'lorem'}>
-          <SiNintendoswitch />
-        </Button>
+        <Button text={'lorem'}>{/* <SiNintendoswitch /> */}</Button>
       </div>
     </div>
   );
