@@ -3,12 +3,12 @@
 
 .host {
   @include center-ele('flex', true);
-  // neu-ele: default
   @include neu-ele('flat');
+  height: fit-content;
+  width: fit-content;
   overflow: hidden;
 
   &:active {
-    // neu-ele: pressing
     @include neu-ele('concave');
 
     .txt {

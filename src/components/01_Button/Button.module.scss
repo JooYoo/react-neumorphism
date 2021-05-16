@@ -5,6 +5,8 @@
   @include center-ele('flex', true);
   @include neu-ele('flat');
   padding: (0.5 * $size--m) $size--m;
+  height: fit-content;
+  width: fit-content;
 
   &:active {
     @include neu-ele('concave');

@@ -2,15 +2,20 @@ import './App.css';
 import { SiNintendoswitch } from 'react-icons/si';
 import ButtonIsolation from './components/00_ButtonIsolation/ButtonIsolation';
 import Button from './components/01_Button/Button';
+import Bg from './components/02_Bg/Bg';
 
 function App() {
   return (
     <div className="App">
-      <ButtonIsolation text={'H'}>{/* <SiNintendoswitch /> */}</ButtonIsolation>
+      <Bg center>
+        <ButtonIsolation text={'H'}>
+          {/* <SiNintendoswitch /> */}
+        </ButtonIsolation>
 
-      <div style={{ marginTop: '20px' }}>
+        <div style={{ margin: '20px' }}></div>
+
         <Button text={'lorem'}>{/* <SiNintendoswitch /> */}</Button>
-      </div>
+      </Bg>
     </div>
   );
 }

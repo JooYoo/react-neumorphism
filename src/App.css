@@ -15,6 +15,4 @@ body {
   align-items: center;
 
   height: 100%;
-  /* TODO: as a Component? */
-  background-color: rgba(230, 230, 230, 1);
 }

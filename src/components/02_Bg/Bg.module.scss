@@ -1,0 +1,12 @@
+@import '../share/sass/global_var';
+@import '../share/sass/global_mixin';
+
+.host {
+  height: 100%;
+  width: 100%;
+  background-color: $bg__color--light;
+}
+
+.center--flex {
+  @include center-ele('flex', true);
+}
