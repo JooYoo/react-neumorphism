@@ -1,12 +1,13 @@
 @import './global_var';
 
-@mixin center-ele($approach, $isContainingBlock) {
+@mixin center-ele($approach, $isContainingBlock, $direction: row) {
   @if ($isContainingBlock) {
     position: relative;
   }
 
   @if ($approach == 'flex') {
     display: flex;
+    flex-direction: $direction;
     justify-content: center;
     align-items: center;
   } @else if ($approach == 'absolute') {
@@ -18,8 +19,8 @@
 }
 
 @mixin neu-ele($type) {
+  border-radius: $border-radius--round-corner;
   @if ($type == 'flat') {
-    border-radius: $border-radius--round-corner;
     padding: $size--m;
     border: $neu-ele__border--flat;
     background-color: $neu-ele__bg-color--flat;
@@ -72,4 +73,15 @@
       padding-inline-start: $size;
     }
   }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  TextBlock                                 */
+/* -------------------------------------------------------------------------- */
+
+@mixin textblock__txt-size($size) {
+  margin: unset;
+  padding: 2 * $size;
+  font-size: $size;
+  line-height: 2 * $size;
 }

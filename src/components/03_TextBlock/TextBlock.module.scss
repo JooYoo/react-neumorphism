@@ -1,0 +1,25 @@
+@import '../share/sass/global_mixin';
+@import '../share/sass/global_var';
+
+.host {
+  @include neu-ele('concave');
+  width: 80%;
+}
+
+.txt {
+  @include textblock__txt-size($size--s);
+}
+
+.size {
+  &--s {
+    @include textblock__txt-size($size--s);
+  }
+
+  &--m {
+    @include textblock__txt-size($size--m);
+  }
+
+  &--l {
+    @include textblock__txt-size($size--l);
+  }
+}

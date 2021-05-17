@@ -7,6 +7,10 @@
   background-color: $bg__color--light;
 }
 
-.center--flex {
+.center--flex-row {
   @include center-ele('flex', true);
+}
+
+.center--flex-column {
+  @include center-ele('flex', true, column);
 }
