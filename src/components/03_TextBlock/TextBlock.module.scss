@@ -1,25 +1,68 @@
 @import '../share/sass/global_mixin';
 @import '../share/sass/global_var';
 
+$text-block__padding: 1.8 * $size--s;
+
 .host {
   @include neu-ele('concave');
-  width: 80%;
+  padding: $text-block__padding;
+}
+
+.title {
+  margin: unset;
+  @include textblock__title--size($size--s);
 }
 
 .txt {
   @include textblock__txt-size($size--s);
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                    size                                    */
+/* -------------------------------------------------------------------------- */
+
 .size {
   &--s {
-    @include textblock__txt-size($size--s);
+    padding: 1.8 * $size--s;
+
+    .title {
+      @include textblock__title--size($size--s);
+    }
+
+    .txt {
+      @include textblock__txt-size($size--s);
+    }
   }
 
   &--m {
-    @include textblock__txt-size($size--m);
+    padding: 1.5 * $size--m;
+
+    .title {
+      @include textblock__title--size($size--m);
+    }
+    .txt {
+      @include textblock__txt-size($size--m);
+    }
   }
 
   &--l {
-    @include textblock__txt-size($size--l);
+    padding: 1.2 * $size--l;
+
+    .title {
+      @include textblock__title--size($size--l);
+    }
+    .txt {
+      @include textblock__txt-size($size--l);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   variant                                  */
+/* -------------------------------------------------------------------------- */
+
+.var {
+  &__none {
+    display: none;
   }
 }

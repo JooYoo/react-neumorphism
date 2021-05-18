@@ -8,7 +8,7 @@ import TextBlock from './components/03_TextBlock/TextBlock';
 function App() {
   return (
     <div className="App">
-      <Bg centerColumn>
+      <Bg centerColumn padding={'1rem'}>
         {/* TODO: icon as prop */}
         <ButtonIsolation text={'H'}>
           {/* <SiNintendoswitch /> */}
@@ -20,7 +20,7 @@ function App() {
 
         <br />
         <br />
-        <TextBlock>
+        <TextBlock small title={'Title'}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloremque
           sit voluptates modi ducimus? Reprehenderit a illo id impedit
           voluptate!

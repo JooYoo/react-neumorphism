@@ -2,11 +2,21 @@ import React from 'react';
 import style from './TextBlock.module.scss';
 
 const TextBlock = (props) => {
-  const { children } = props;
+  const { small, middle, large, title, children } = props;
+
+  // size
+  const isSmall = small ? 'size--s' : '';
+  const isMiddle = middle ? 'size--m' : '';
+  const isLarge = large ? 'size--l' : '';
 
   return (
-    <div className={`${style.host}`}>
-      {/* <h3>Title</h3> */}
+    <div
+      className={`${style.host}
+                     ${style[isSmall]}
+                     ${style[isMiddle]}
+                     ${style[isLarge]}`}
+    >
+      {title ? <h3 className={`${style.title}`}>{title}</h3> : ''}
       <p className={`${style.txt}`}>{children}</p>
     </div>
   );
@@ -14,8 +24,7 @@ const TextBlock = (props) => {
 
 export default TextBlock;
 
-// size: small, middle, large
-// isFullLine
+// [x] size: small, middle, large
 // icon as prop
 // title as prop
 // isOneLine
