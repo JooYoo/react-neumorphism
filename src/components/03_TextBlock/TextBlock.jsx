@@ -2,19 +2,30 @@ import React from 'react';
 import style from './TextBlock.module.scss';
 
 const TextBlock = (props) => {
-  const { small, middle, large, title, children } = props;
+  const { small, middle, large, title, right, center, oneline, children } =
+    props;
 
   // size
   const isSmall = small ? 'size--s' : '';
   const isMiddle = middle ? 'size--m' : '';
   const isLarge = large ? 'size--l' : '';
 
+  // align
+  const isTxtRight = right ? 'var__txt-align--right' : '';
+  const isTxtCenter = center ? 'var__txt-align--center' : '';
+
+  // var
+  const isOneline = oneline ? 'var__txt-oneline' : '';
+
   return (
     <div
       className={`${style.host}
-                     ${style[isSmall]}
-                     ${style[isMiddle]}
-                     ${style[isLarge]}`}
+                  ${style[isSmall]}
+                  ${style[isMiddle]}
+                  ${style[isLarge]}
+                  ${style[isTxtRight]}
+                  ${style[isTxtCenter]}
+                  ${style[isOneline]}`}
     >
       {title ? <h3 className={`${style.title}`}>{title}</h3> : ''}
       <p className={`${style.txt}`}>{children}</p>
@@ -25,6 +36,8 @@ const TextBlock = (props) => {
 export default TextBlock;
 
 // [x] size: small, middle, large
-// icon as prop
-// title as prop
-// isOneLine
+// [x] title as prop
+// [x] toLeft toRight toCenter
+// [x] isOneLine
+// oneline fading at end
+// icon as prop; refact icon inject by <Button>, <ButtonIsolation>

@@ -6,6 +6,7 @@ $text-block__padding: 1.8 * $size--s;
 .host {
   @include neu-ele('concave');
   padding: $text-block__padding;
+  width: 100%;
 }
 
 .title {
@@ -35,7 +36,7 @@ $text-block__padding: 1.8 * $size--s;
   }
 
   &--m {
-    padding: 1.5 * $size--m;
+    padding: 1.2 * $size--m;
 
     .title {
       @include textblock__title--size($size--m);
@@ -62,7 +63,19 @@ $text-block__padding: 1.8 * $size--s;
 /* -------------------------------------------------------------------------- */
 
 .var {
-  &__none {
-    display: none;
+  &__txt-align--right {
+    text-align: right;
+  }
+
+  &__txt-align--center {
+    text-align: center;
+  }
+
+  &__txt-oneline {
+    white-space: nowrap;
+    overflow: hidden;
+
+    // TODO: fading at end
+    // -webkit-mask-image: linear-gradient(to left, transparent 1%, white 10%);
   }
 }
