@@ -9,9 +9,20 @@ $text-block__padding: 1.8 * $size--s;
   width: 100%;
 }
 
+// TODOS: alignment icon and title
+.container__title-icon {
+  display: flex;
+  align-items: center;
+}
+
 .title {
   margin: unset;
   @include textblock__title--size($size--s);
+}
+
+.icon {
+  border: 1px red solid;
+  padding-bottom: 1.5rem;
 }
 
 .txt {
@@ -75,7 +86,9 @@ $text-block__padding: 1.8 * $size--s;
     white-space: nowrap;
     overflow: hidden;
 
-    // TODO: fading at end
-    // -webkit-mask-image: linear-gradient(to left, transparent 1%, white 10%);
+    .txt {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
