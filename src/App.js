@@ -20,7 +20,7 @@ function App() {
 
         <br />
         <br />
-        <TextBlock title={'Title'} titleIcon={<SiNintendoswitch />}>
+        <TextBlock>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloremque
           sit voluptates modi ducimus? Reprehenderit a illo id impedit
           voluptate!

@@ -36,7 +36,7 @@ const TextBlock = (props) => {
                   ${style[isTxtCenter]}
                   ${style[isOneline]}`}
     >
-      <div>
+      <div className={style['container__title-icon']}>
         {titleIcon ? <span className={`${style.icon}`}>{titleIcon}</span> : ''}
         {title ? <h3 className={`${style.title}`}>{title}</h3> : ''}
       </div>
