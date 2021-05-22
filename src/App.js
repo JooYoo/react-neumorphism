@@ -9,14 +9,11 @@ function App() {
   return (
     <div className="App">
       <Bg centerColumn padding={'1rem'}>
-        {/* TODO: icon as prop */}
-        <ButtonIsolation text={'H'}>
-          {/* <SiNintendoswitch /> */}
-        </ButtonIsolation>
+        <ButtonIsolation text={'H'} />
 
         <br />
         <br />
-        <Button text={'lorem'}>{/* <SiNintendoswitch /> */}</Button>
+        <Button text={'lorem'} icon={<SiNintendoswitch />} />
 
         <br />
         <br />

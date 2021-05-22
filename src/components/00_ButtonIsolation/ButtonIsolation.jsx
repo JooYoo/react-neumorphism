@@ -6,12 +6,12 @@ const ButtonIsolation = (props) => {
     small,
     middle,
     large,
+    icon,
     text,
     round,
     rhombus,
     thick,
     convex,
-    children,
     onClick,
   } = props;
 
@@ -38,8 +38,11 @@ const ButtonIsolation = (props) => {
                   ${style[isThick]}`}
       onClick={onClick}
     >
-      <span className={style.txt}>{text}</span>
-      <span className={style.icon}>{children}</span>
+      {icon ? (
+        <span className={style.icon}>{icon}</span>
+      ) : (
+        <span className={style.txt}>{text}</span>
+      )}
     </button>
   );
 };

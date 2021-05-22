@@ -6,13 +6,13 @@ const Button = (props) => {
     small,
     middle,
     large,
+    icon,
     text,
     round,
     thick,
     convex,
     start,
     end,
-    children,
     onClick,
   } = props;
 
@@ -22,7 +22,6 @@ const Button = (props) => {
   const isConvex = convex ? 'var__shape--convex' : '';
   const isStart = start ? 'var__icon-position--start' : '';
   const isEnd = end ? 'var__icon-position--end' : '';
-  const isIcon = children ? '' : 'icon--disable';
 
   // size
   const isSmall = small ? 'size--s' : '';
@@ -42,7 +41,7 @@ const Button = (props) => {
                   ${style[isEnd]} `}
       onClick={onClick}
     >
-      <span className={`${style.icon} ${style[isIcon]}`}>{children}</span>
+      {icon ? <span className={`${style.icon}`}>{icon}</span> : ''}
       <span className={style.txt}>{text}</span>
     </button>
   );
