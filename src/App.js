@@ -4,6 +4,7 @@ import ButtonIsolation from './components/00_ButtonIsolation/ButtonIsolation';
 import Button from './components/01_Button/Button';
 import Bg from './components/02_Bg/Bg';
 import TextBlock from './components/03_TextBlock/TextBlock';
+import TextBox from './components/04_TextBox/TextBox';
 
 function App() {
   return (
@@ -22,6 +23,13 @@ function App() {
           sit voluptates modi ducimus? Reprehenderit a illo id impedit
           voluptate!
         </TextBlock>
+
+        <br />
+        <br />
+        <div style={{ width: '100%', display: 'flex' }}>
+          <TextBox />
+          <TextBox />
+        </div>
       </Bg>
     </div>
   );

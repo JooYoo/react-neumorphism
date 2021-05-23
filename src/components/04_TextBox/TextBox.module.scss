@@ -1,0 +1,20 @@
+@import '../share/sass/global_var';
+@import '../share/sass/global_mixin';
+
+.host {
+  margin: 1rem;
+  width: 100%;
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    @include neu-ele('concave');
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+  }
+}
