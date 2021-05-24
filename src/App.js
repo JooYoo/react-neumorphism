@@ -27,8 +27,11 @@ function App() {
         <br />
         <br />
         <div style={{ width: '100%', display: 'flex' }}>
-          <TextBox />
-          <TextBox />
+          <TextBox
+            label={'User name'}
+            description={'Please enter your user name'}
+          />
+          <TextBox label={'First name'} />
         </div>
       </Bg>
     </div>

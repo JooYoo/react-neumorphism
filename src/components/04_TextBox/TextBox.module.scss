@@ -4,17 +4,24 @@
 .host {
   margin: 1rem;
   width: 100%;
+}
 
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-  }
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+}
 
-  input {
-    @include neu-ele('concave');
-    padding: 1rem;
-    width: 100%;
-    font-size: 1rem;
-    outline: none;
-  }
+.input-box {
+  @include neu-ele('concave');
+  padding: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.description {
+  margin: 0.25rem 0 2rem 0.25rem;
+  font-size: 0.9rem;
 }
