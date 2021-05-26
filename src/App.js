@@ -28,10 +28,12 @@ function App() {
         <br />
         <div style={{ width: '100%', display: 'flex' }}>
           <TextBox
+            textarea
             label={'User name'}
+            placeholder={'User name ...'}
             description={'Please enter your user name'}
           />
-          <TextBox label={'First name'} />
+          <TextBox valid placeholder={'User name ...'} />
         </div>
       </Bg>
     </div>

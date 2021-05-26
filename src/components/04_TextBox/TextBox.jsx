@@ -2,14 +2,26 @@ import React from 'react';
 import style from './TextBox.module.scss';
 
 const TextBox = (props) => {
-  const { label, description } = props;
-
-  // props
+  const { label, placeholder, description, textarea, valid } = props;
 
   return (
     <div className={style.host}>
       <label className={style.label}>{label}</label>
-      <input className={style['input-box']} type="text" placeholder={label} />
+
+      <div>
+        {textarea ? (
+          <textarea
+            className={style.textarea}
+            placeholder={placeholder}
+          ></textarea>
+        ) : (
+          <input
+            className={style['input-box']}
+            type="textarea"
+            placeholder={placeholder}
+          />
+        )}
+      </div>
 
       {description ? (
         <div className={style.description}>{description}</div>
@@ -23,9 +35,8 @@ const TextBox = (props) => {
 export default TextBox;
 
 // TODO:
-// - [ ] text field discription under textbox
-// - [ ] add valid, invalid
-// - [ ] text field as textblock
+// - [x] text field discription under textbox
+// - [x] text field as textblock
 // - [ ] text field disabled
 // - [ ] button--left / --right
 // - [ ] icon-button--left / --right

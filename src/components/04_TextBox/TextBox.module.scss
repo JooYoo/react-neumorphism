@@ -21,6 +21,16 @@
   outline: none;
 }
 
+.textarea {
+  @include neu-ele('concave');
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  resize: vertical;
+  font-size: 1rem;
+  font: caption;
+}
+
 .description {
   margin: 0.25rem 0 2rem 0.25rem;
   font-size: 0.9rem;
