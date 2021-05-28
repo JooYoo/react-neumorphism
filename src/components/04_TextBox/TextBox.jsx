@@ -2,11 +2,13 @@ import React from 'react';
 import style from './TextBox.module.scss';
 
 const TextBox = (props) => {
-  const { label, placeholder, description, textarea, valid, invalid } = props;
+  const { label, placeholder, description, textarea, valid, invalid, icon } =
+    props;
 
   // var
   const isValid = valid ? 'textbox--valid' : '';
   const isInvalid = invalid ? 'textbox--invalid' : '';
+  const isIcon = icon ? 'textbox--icon' : '';
 
   return (
     <div className={style.host}>
@@ -18,11 +20,14 @@ const TextBox = (props) => {
           placeholder={placeholder}
         ></textarea>
       ) : (
-        <input
-          className={`${style['input-box']} ${style[isValid]} ${style[isInvalid]}`}
-          type="text"
-          placeholder={placeholder}
-        />
+        <div className={style[isIcon]}>
+          {icon ? <span className={style.icon}>{icon}</span> : ''}
+          <input
+            className={`${style['input-box']} ${style[isValid]} ${style[isInvalid]}`}
+            type="text"
+            placeholder={placeholder}
+          />
+        </div>
       )}
 
       {description ? (

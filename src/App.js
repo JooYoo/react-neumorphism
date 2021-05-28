@@ -33,7 +33,7 @@ function App() {
             placeholder={'User name ...'}
             description={'Please enter your user name'}
           />
-          <TextBox valid placeholder={'User name ...'} />
+          <TextBox icon={<SiNintendoswitch />} placeholder={'User name ...'} />
         </div>
       </Bg>
     </div>
