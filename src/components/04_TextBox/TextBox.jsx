@@ -2,8 +2,19 @@ import React from 'react';
 import style from './TextBox.module.scss';
 
 const TextBox = (props) => {
-  const { label, placeholder, description, textarea, valid, invalid, icon } =
-    props;
+  const {
+    large,
+    label,
+    placeholder,
+    description,
+    textarea,
+    valid,
+    invalid,
+    icon,
+  } = props;
+
+  // size
+  const isLarge = large ? 'size--l' : '';
 
   // var
   const isValid = valid ? 'textbox--valid' : '';
@@ -11,7 +22,7 @@ const TextBox = (props) => {
   const isIcon = icon ? 'textbox--icon' : '';
 
   return (
-    <div className={style.host}>
+    <div className={`${style.host} ${style[isLarge]}`}>
       <label className={style.label}>{label}</label>
 
       {textarea ? (
@@ -44,8 +55,7 @@ export default TextBox;
 // TODO:
 // - [x] text field discription under textbox
 // - [x] text field as textblock
+// - [x] textbox icon
+// - [x] field valid
+// - [x] field invalid
 // - [ ] text field disabled
-// - [ ] button--left / --right
-// - [ ] icon-button--left / --right
-// - [ ] field valid
-// - [ ] field invalid

@@ -1,63 +1,134 @@
 @import '../share/sass/global_var';
 @import '../share/sass/global_mixin';
 
+$host__margin: $size--s;
+
+// size: regular
+$label__margin--bottom: 0.5rem;
+$label__margin--left: 0.25rem;
+$label__font-size: 0.9rem;
+$input-box__padding: 1rem;
+$input-box__font-size: 1rem;
+$textarea__padding: 1rem;
+$textarea__font-size: 1rem;
+$description__margin: 0.25rem 0 2rem 0.25rem;
+$description__font-size: 0.9rem;
+$box__border--valid: 1px green solid;
+$box__border--invalid: 1px rgb(203, 68, 74) solid;
+$text-box-icon__font-size: 1.2rem;
+$text-box-icon__padding: 1rem 1rem calc(1rem - 3px);
+$text-box__input-box__padding--left: 2.8rem;
+
+// TODO: size: large
+$label__margin--bottom--l: 0.8rem;
+$label__font-size--l: 1.3rem;
+$input-box__padding--l: 1.5rem;
+$input-box__font-size--l: 1.5rem;
+$textarea__padding--l: 1.5rem;
+$textarea__font-size--l: 1.5rem;
+$description__margin--top--l: 0.8rem;
+$description__font-size--l: 1.3rem;
+$text-box-icon__font-size--l: 1.8rem;
+$text-box-icon__padding--l: 1rem 1rem calc(1rem - 6px);
+$text-box__input-box__padding--left--l: 4.8rem;
+
 .host {
-  margin: 1rem;
+  margin: $host__margin;
   width: 100%;
   height: fit-content;
 }
 
 .label {
   display: block;
-  margin-bottom: 0.5rem;
-  margin-left: 0.25rem;
-  font-size: 0.9rem;
+  margin-bottom: $label__margin--bottom;
+  margin-left: $label__margin--left;
+  font-size: $label__font-size;
 }
 
 .input-box {
   @include neu-ele('concave');
-  padding: 1rem;
+  padding: $input-box__padding;
   width: 100%;
-  font-size: 1rem;
+  font-size: $input-box__font-size;
   outline: none;
 }
 
 .textarea {
   @include neu-ele('concave');
-  padding: 1rem;
+  padding: $textarea__padding;
   width: 100%;
   height: 100%;
   resize: vertical;
-  font-size: 1rem;
+  font-size: $textarea__font-size;
   font: caption;
 }
 
 .description {
-  margin: 0.25rem 0 2rem 0.25rem;
-  font-size: 0.9rem;
+  margin: $description__margin;
+  font-size: $description__font-size;
 }
 
-// var
+/* -------------------------------------------------------------------------- */
+/*                                    size                                    */
+/* -------------------------------------------------------------------------- */
+
+.size--l {
+  .label {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+  }
+
+  .input-box {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .textarea {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  .description {
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+  }
+
+  .textbox--icon {
+    .icon {
+      font-size: 1.8rem;
+      padding: 1.5rem;
+      padding-bottom: calc(1.5rem - 6px);
+    }
+
+    .input-box {
+      padding-left: 4.2rem;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   variant                                  */
+/* -------------------------------------------------------------------------- */
+
 .textbox--valid {
-  border: 1px green solid;
+  border: $box__border--valid;
 }
 
 .textbox--invalid {
-  border: 1px rgb(203, 68, 74) solid;
+  border: $box__border--invalid;
 }
 
 .textbox--icon {
-  position: relative;
   display: flex;
   align-items: center;
 
   .icon {
     position: absolute;
-    font-size: 1rem;
-    padding-left: 1.2rem;
+    font-size: $text-box-icon__font-size;
+    padding: $text-box-icon__padding;
   }
 
   .input-box {
-    padding-left: 3rem;
+    padding-left: $text-box__input-box__padding--left;
   }
 }

@@ -1,5 +1,5 @@
 import './App.css';
-import { SiNintendoswitch } from 'react-icons/si';
+import { SiNintendoswitch, SiYoutube } from 'react-icons/si';
 import ButtonIsolation from './components/00_ButtonIsolation/ButtonIsolation';
 import Button from './components/01_Button/Button';
 import Bg from './components/02_Bg/Bg';
@@ -27,8 +27,13 @@ function App() {
         <br />
         <br />
         <div style={{ width: '100%', display: 'flex' }}>
-          <TextBox
+          {/* <TextBox
             textarea
+            label={'User name'}
+            placeholder={'User name ...'}
+            description={'Please enter your user name'}
+          /> */}
+          <TextBox
             label={'User name'}
             placeholder={'User name ...'}
             description={'Please enter your user name'}
