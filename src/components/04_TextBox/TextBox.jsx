@@ -10,6 +10,7 @@ const TextBox = (props) => {
     textarea,
     valid,
     invalid,
+    disable,
     icon,
   } = props;
 
@@ -20,6 +21,7 @@ const TextBox = (props) => {
   const isValid = valid ? 'textbox--valid' : '';
   const isInvalid = invalid ? 'textbox--invalid' : '';
   const isIcon = icon ? 'textbox--icon' : '';
+  const isDisable = disable ? 'textbox--disable' : '';
 
   return (
     <div className={`${style.host} ${style[isLarge]}`}>
@@ -27,14 +29,14 @@ const TextBox = (props) => {
 
       {textarea ? (
         <textarea
-          className={style.textarea}
+          className={`${style.textarea} ${style[isValid]} ${style[isInvalid]} ${style[isDisable]}`}
           placeholder={placeholder}
         ></textarea>
       ) : (
         <div className={style[isIcon]}>
           {icon ? <span className={style.icon}>{icon}</span> : ''}
           <input
-            className={`${style['input-box']} ${style[isValid]} ${style[isInvalid]}`}
+            className={`${style['input-box']} ${style[isValid]} ${style[isInvalid]} ${style[isDisable]}`}
             type="text"
             placeholder={placeholder}
           />
@@ -51,11 +53,3 @@ const TextBox = (props) => {
 };
 
 export default TextBox;
-
-// TODO:
-// - [x] text field discription under textbox
-// - [x] text field as textblock
-// - [x] textbox icon
-// - [x] field valid
-// - [x] field invalid
-// - [ ] text field disabled

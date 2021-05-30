@@ -4,6 +4,7 @@
 .host {
   @include center-ele('flex', true);
   @include neu-ele('flat');
+  padding: $size--m;
   height: fit-content;
   width: fit-content;
   overflow: hidden;

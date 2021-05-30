@@ -3,23 +3,24 @@
 
 $host__margin: $size--s;
 
+$box__border--valid: 1px green solid;
+$box__border--invalid: 1px rgb(203, 68, 74) solid;
+
 // size: regular
 $label__margin--bottom: 0.5rem;
 $label__margin--left: 0.25rem;
 $label__font-size: 0.9rem;
-$input-box__padding: 1rem;
-$input-box__font-size: 1rem;
-$textarea__padding: 1rem;
-$textarea__font-size: 1rem;
+$input-box__padding: $size--s; // 1rem
+$input-box__font-size: $size--s; // 1rem
+$textarea__padding: $size--s; // 1rem
+$textarea__font-size: $size--s; // 1rem
 $description__margin: 0.25rem 0 2rem 0.25rem;
 $description__font-size: 0.9rem;
-$box__border--valid: 1px green solid;
-$box__border--invalid: 1px rgb(203, 68, 74) solid;
 $text-box-icon__font-size: 1.2rem;
 $text-box-icon__padding: 1rem 1rem calc(1rem - 3px);
 $text-box__input-box__padding--left: 2.8rem;
 
-// TODO: size: large
+// size: large
 $label__margin--bottom--l: 0.8rem;
 $label__font-size--l: 1.3rem;
 $input-box__padding--l: 1.5rem;
@@ -29,7 +30,7 @@ $textarea__font-size--l: 1.5rem;
 $description__margin--top--l: 0.8rem;
 $description__font-size--l: 1.3rem;
 $text-box-icon__font-size--l: 1.8rem;
-$text-box-icon__padding--l: 1rem 1rem calc(1rem - 6px);
+$text-box-icon__padding--l: 1.5rem 1.5rem calc(1.5rem - 6px);
 $text-box__input-box__padding--left--l: 4.8rem;
 
 .host {
@@ -74,34 +75,33 @@ $text-box__input-box__padding--left--l: 4.8rem;
 
 .size--l {
   .label {
-    margin-bottom: 0.8rem;
-    font-size: 1.3rem;
+    margin-bottom: $label__margin--bottom--l;
+    font-size: $label__font-size--l;
   }
 
   .input-box {
-    padding: 1.5rem;
-    font-size: 1.5rem;
+    padding: $input-box__padding--l;
+    font-size: $input-box__font-size--l;
   }
 
   .textarea {
-    padding: 1.5rem;
-    font-size: 1.5rem;
+    padding: $textarea__padding--l;
+    font-size: $textarea__font-size--l;
   }
 
   .description {
-    margin-top: 0.8rem;
-    font-size: 1.3rem;
+    margin-top: $description__margin--top--l;
+    font-size: $description__font-size--l;
   }
 
   .textbox--icon {
     .icon {
-      font-size: 1.8rem;
-      padding: 1.5rem;
-      padding-bottom: calc(1.5rem - 6px);
+      font-size: $text-box-icon__font-size--l;
+      padding: $text-box-icon__padding--l;
     }
 
     .input-box {
-      padding-left: 4.2rem;
+      padding-left: $text-box__input-box__padding--left--l;
     }
   }
 }
@@ -116,6 +116,11 @@ $text-box__input-box__padding--left--l: 4.8rem;
 
 .textbox--invalid {
   border: $box__border--invalid;
+}
+
+.textbox--disable {
+  @include neu-ele('flat');
+  pointer-events: none;
 }
 
 .textbox--icon {

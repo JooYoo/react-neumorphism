@@ -33,12 +33,17 @@ function App() {
             placeholder={'User name ...'}
             description={'Please enter your user name'}
           /> */}
+          {/* <TextBox
+            label={'User name'}
+            placeholder={'User name ...'}
+            description={'Please enter your user name'}
+          /> */}
+          <TextBox icon={<SiNintendoswitch />} placeholder={'User name ...'} />
           <TextBox
             label={'User name'}
             placeholder={'User name ...'}
             description={'Please enter your user name'}
           />
-          <TextBox icon={<SiNintendoswitch />} placeholder={'User name ...'} />
         </div>
       </Bg>
     </div>

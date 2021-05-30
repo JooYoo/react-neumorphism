@@ -21,7 +21,6 @@
 @mixin neu-ele($type) {
   border-radius: $border-radius--round-corner;
   @if ($type == 'flat') {
-    padding: $size--m;
     border: $neu-ele__border--flat;
     background-color: $neu-ele__bg-color--flat;
     box-shadow: $neu-ele__shadow--flat;
