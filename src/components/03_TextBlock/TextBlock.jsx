@@ -46,10 +46,3 @@ const TextBlock = (props) => {
 };
 
 export default TextBlock;
-
-// [x] size: small, middle, large
-// [x] title as prop
-// [x] toLeft toRight toCenter
-// [x] isOneLine
-// oneline fading at end
-// icon as prop; refact icon inject by <Button>, <ButtonIsolation>

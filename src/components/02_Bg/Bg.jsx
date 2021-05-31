@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Bg.module.scss';
 
-function Bg(props) {
+const Bg = (props) => {
   const { centerRow, centerColumn, padding, children } = props;
 
   const isCenterRow = centerRow ? 'center--flex-row' : '';
@@ -17,6 +17,6 @@ function Bg(props) {
       {children}
     </div>
   );
-}
+};
 
 export default Bg;
