@@ -21,4 +21,10 @@ export const Default = Template.bind({});
 Default.args = {
   text: 'H',
   size: 'middle',
+  round: false,
+  rhombus: false,
+  thick: false,
+  convex: false,
 };
+
+// TODO: Icon as another story

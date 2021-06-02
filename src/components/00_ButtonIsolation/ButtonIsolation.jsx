@@ -43,12 +43,18 @@ export default ButtonIsolation;
 
 ButtonIsolation.propType = {
   size: PropTypes.oneOf(['small', 'middle', 'large']),
+  icon: PropTypes.element,
+  text: PropTypes.string,
   round: PropTypes.bool,
+  rhombus: PropTypes.bool,
+  thick: PropTypes.bool,
+  convex: PropTypes.bool,
+  onClick: () => {},
 };
 
 ButtonIsolation.defaultProps = {
   size: 'middle',
-  icon: null,
+  icon: undefined,
   text: 'H',
   round: false,
   rhombus: false,
