@@ -32,7 +32,7 @@ $neu-ele__shadow--flat: $neu-shadow__offset--right-bottom $color__shadow--1,
 
 // 凹 concave
 $neu-ele__border-color--concave: rgba(240, 240, 240, 0.5);
-$neu-ele__bg-color--concave: rgba(235, 235, 235, 1);
+$neu-ele__bg-color--concave: rgba(235, 235, 235, 0.5);
 $neu-ele__border--concave: $neu-ele__border--flat;
 $neu-ele__border--concave-thick: (1.5 * $unit__px) solid
   $neu-ele__border-color--concave; // 4px

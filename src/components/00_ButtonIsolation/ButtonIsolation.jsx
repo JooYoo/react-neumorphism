@@ -18,13 +18,13 @@ const ButtonIsolation = (props) => {
 
   return (
     <button
-      className={`${style['host']} 
-                  ${style[isSmall]} 
-                  ${style[isMiddle]} 
-                  ${style[isLarge]} 
-                  ${style[isRound]} 
-                  ${style[isRhombus]} 
-                  ${style[isConvex]} 
+      className={`${style['host']}
+                  ${style[isSmall]}
+                  ${style[isMiddle]}
+                  ${style[isLarge]}
+                  ${style[isRound]}
+                  ${style[isRhombus]}
+                  ${style[isConvex]}
                   ${style[isThick]}`}
       onClick={onClick}
     >
@@ -41,15 +41,25 @@ export default ButtonIsolation;
 
 /* ---------------------------------- Types ---------------------------------- */
 
-ButtonIsolation.propType = {
+ButtonIsolation.propTypes = {
+  /**
+   * The size of the button
+   */
   size: PropTypes.oneOf(['small', 'middle', 'large']),
+  /**
+   * `react-icons` as rendered component
+   */
   icon: PropTypes.element,
+  /**
+   * The **Text** content of the button
+   */
   text: PropTypes.string,
+  //TODO: complete the description of each props
   round: PropTypes.bool,
   rhombus: PropTypes.bool,
   thick: PropTypes.bool,
   convex: PropTypes.bool,
-  onClick: () => {},
+  onClick: PropTypes.func,
 };
 
 ButtonIsolation.defaultProps = {

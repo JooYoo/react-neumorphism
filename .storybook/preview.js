@@ -12,7 +12,7 @@ export const parameters = {
     values: [
       {
         name: 'neu-bg',
-        value: '#ebebeb',
+        value: 'rgba(235, 235, 235, 0.5)',
       },
     ],
   },
