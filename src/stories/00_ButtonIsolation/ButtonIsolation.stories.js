@@ -7,10 +7,48 @@ export default {
   title: 'Buttons/ButtonIsolation',
   component: ButtonIsolation,
   argTypes: {
+    text: {
+      table: {
+        category: 'Content'
+      }
+    },
+    icon: {
+      table: {
+        category: 'Content'
+      }
+    },
     size: {
       options: ['small', 'middle', 'large'],
       control: { type: 'radio' },
+      table: {
+        category: 'Size'
+      }
     },
+    round: {
+      table: {
+        category: 'Shape'
+      }
+    },
+    rhombus: {
+      table: {
+        category: 'Shape'
+      }
+    },
+    thick: {
+      table: {
+        category: 'Shape'
+      }
+    },
+    convex: {
+      table: {
+        category: 'Shape'
+      }
+    },
+    onClick: {
+      table: {
+        category: 'Event'
+      }
+    }
   },
   parameters : {
     docs: {

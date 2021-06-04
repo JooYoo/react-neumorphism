@@ -54,11 +54,25 @@ ButtonIsolation.propTypes = {
    * The **Text** content of the button
    */
   text: PropTypes.string,
-  //TODO: complete the description of each props
+  /**
+   * The shape of the button will be round.
+   */
   round: PropTypes.bool,
+  /**
+   * The shape of the button will be rhombus.
+   */
   rhombus: PropTypes.bool,
+  /**
+   * The border of the button will be thick.
+   */
   thick: PropTypes.bool,
+  /**
+   * The button will have a convex effect.
+   */
   convex: PropTypes.bool,
+  /**
+   * Pass EventHandler to handle ClickEvent
+   */
   onClick: PropTypes.func,
 };
 
