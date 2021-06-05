@@ -53,7 +53,7 @@ export default {
   parameters : {
     docs: {
       description: {
-        component: 'This component should ideally display a single letter, symbol or icon.',
+        component: 'This component should ideally display a single letter, symbol or icon. ',
       },
     }
   }
@@ -82,7 +82,30 @@ WithIcon.args = {
 WithIcon.parameters = {
   docs: {
     description: {
-      story: 'This is a story for ButtonIsolation with Icon'
+      story: 'The icon prop require `react-icons` rendered component'
     }
   }
 }
+
+// story: round
+export const Round = Template.bind({});
+Round.args = {
+  ...Default.args,
+  round: true,
+  convex: true
+}
+Round.parameters = {
+  docs: {
+    description: {
+      story: '`round` + `convex`'
+    }
+  }
+}
+
+// story: rhombus
+export const Rhombus = Template.bind({});
+Rhombus.args = {
+  ...Default.args,
+  rhombus: true
+}
+

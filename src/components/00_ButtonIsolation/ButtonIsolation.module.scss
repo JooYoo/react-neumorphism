@@ -57,6 +57,9 @@
 .var {
   &__shape--round {
     border-radius: $border-radius--eclipse;
+    &:active {
+      border-radius: 50%;
+    }
   }
 
   &__shape--rhombus {

@@ -19,13 +19,14 @@
 }
 
 @mixin neu-ele($type) {
-  border-radius: $border-radius--round-corner;
   @if ($type == 'flat') {
     border: $neu-ele__border--flat;
+    border-radius: $border-radius--round-corner;
     background-color: $neu-ele__bg-color--flat;
     box-shadow: $neu-ele__shadow--flat;
   } @else if($type == 'concave') {
     border: $neu-ele__border--concave;
+    border-radius: $border-radius--round-corner;
     background-color: $neu-ele__bg-color--concave;
     box-shadow: $neu-ele__shadow--concave;
   } @else if($type == 'convex') {
