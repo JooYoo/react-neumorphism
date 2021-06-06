@@ -1,11 +1,10 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import style from './TextBlock.module.scss';
 
 const TextBlock = (props) => {
   const {
-    small,
-    middle,
-    large,
+    size,
     title,
     titleIcon,
     right,
@@ -15,9 +14,9 @@ const TextBlock = (props) => {
   } = props;
 
   // size
-  const isSmall = small ? 'size--s' : '';
-  const isMiddle = middle ? 'size--m' : '';
-  const isLarge = large ? 'size--l' : '';
+  const isSmall = size === 'small' ? 'size--s' : '';
+  const isMiddle =size === 'middle' ? 'size--m' : '';
+  const isLarge = size ==='large' ? 'size--l' : '';
 
   // align
   const isTxtRight = right ? 'var__txt-align--right' : '';
@@ -46,3 +45,26 @@ const TextBlock = (props) => {
 };
 
 export default TextBlock;
+
+/* ---------------------------------- Types --------------------------------- */
+
+TextBlock.propTypes = {
+  //TODO: add description
+  size: PropTypes.oneOf(['small', 'middle', 'large']),
+  title: PropTypes.string,
+  titleIcon: PropTypes.element,
+  right: PropTypes.bool,
+  center: PropTypes.bool,
+  oneline: PropTypes.bool,
+  children: PropTypes.string
+}
+
+TextBlock.propTypes = {
+  size: 'small',
+  title: undefined,
+  titleIcon: undefined,
+  right: false,
+  center: false,
+  oneline: false,
+  children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloremque sit voluptates modi ducimus? Reprehenderit a illo id impedit voluptate!'
+}

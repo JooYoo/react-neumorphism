@@ -6,7 +6,7 @@ $text-block__padding: 1.8 * $size--s;
 .host {
   @include neu-ele('concave');
   padding: $text-block__padding;
-  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container__title-icon {
