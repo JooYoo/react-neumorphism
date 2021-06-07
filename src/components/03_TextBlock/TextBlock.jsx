@@ -49,17 +49,37 @@ export default TextBlock;
 /* ---------------------------------- Types --------------------------------- */
 
 TextBlock.propTypes = {
-  //TODO: add description
+  /**
+   * The size of the TextBlock
+   */
   size: PropTypes.oneOf(['small', 'middle', 'large']),
+  /**
+   * The title of the TextBlock, default is undefined.
+   */
   title: PropTypes.string,
+  /**
+   * The icon next to title, default is undefined.
+   */
   titleIcon: PropTypes.element,
+  /**
+   * All the text right alignment.
+   */
   right: PropTypes.bool,
+  /**
+   * All the text is centered horizontally.
+   */
   center: PropTypes.bool,
+  /**
+   * Disaply only one line text.
+   */
   oneline: PropTypes.bool,
+  /**
+   * The text itself,
+   */
   children: PropTypes.string
 }
 
-TextBlock.propTypes = {
+TextBlock.defaultProps = {
   size: 'small',
   title: undefined,
   titleIcon: undefined,
