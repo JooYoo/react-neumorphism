@@ -15,7 +15,7 @@ const TextBlock = (props) => {
 
   // size
   const isSmall = size === 'small' ? 'size--s' : '';
-  const isMiddle =size === 'middle' ? 'size--m' : '';
+  const isMiddle = size === 'middle' ? 'size--m' : '';
   const isLarge = size ==='large' ? 'size--l' : '';
 
   // align

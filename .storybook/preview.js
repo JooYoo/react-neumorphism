@@ -8,7 +8,7 @@ export const parameters = {
   },
   layout: 'centered',
   backgrounds: {
-    default: 'neu-bg',
+    // default: 'neu-bg',
     values: [
       {
         name: 'neu-bg',

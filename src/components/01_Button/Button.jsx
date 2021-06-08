@@ -1,20 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './Button.module.scss';
 
 const Button = (props) => {
-  const {
-    small,
-    middle,
-    large,
-    icon,
-    text,
-    round,
-    thick,
-    convex,
-    start,
-    end,
-    onClick,
-  } = props;
+  const { size, icon, text, round, thick, convex, start, end, onClick } = props;
 
   // var
   const isRound = round ? 'var__shape--round' : '';
@@ -24,9 +13,9 @@ const Button = (props) => {
   const isEnd = end ? 'var__icon-position--end' : '';
 
   // size
-  const isSmall = small ? 'size--s' : '';
-  const isMiddle = middle ? 'size--m' : '';
-  const isLarge = large ? 'size--l' : '';
+  const isSmall = size === 'small' ? 'size--s' : '';
+  const isMiddle = size === 'middle' ? 'size--m' : '';
+  const isLarge = size === 'large' ? 'size--l' : '';
 
   return (
     <button
@@ -48,3 +37,57 @@ const Button = (props) => {
 };
 
 export default Button;
+
+/* ---------------------------------- Types --------------------------------- */
+
+Button.propTypes = {
+  /**
+   * The size of the button
+   */
+  size: PropTypes.oneOf(['small', 'middle', 'large']),
+  /**
+   * `react-icons` as rendered component
+   */
+  icon: PropTypes.element,
+  /**
+   * The **Text** content of the button
+   */
+  text: PropTypes.string,
+  /**
+   * The shape of the button will be round.
+   */
+  round: PropTypes.bool,
+  /**
+   * The border of the button will be thick.
+   */
+  thick: PropTypes.bool,
+  /**
+   * The button will have a convex effect.
+   */
+  convex: PropTypes.bool,
+  /**
+   * The icon is in the beginning.
+   */
+  //TODO: check if it's necessary
+  start: PropTypes.bool,
+  /**
+   * The icon is in the end,
+   */
+  end: PropTypes.bool,
+  /**
+   * Pass EventHandler to handle ClickEvent
+   */
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  size: 'middle',
+  icon: undefined,
+  text: 'Press',
+  round: false,
+  thick: false,
+  convex: false,
+  start: false,
+  end: false,
+  onClick: undefined,
+};
