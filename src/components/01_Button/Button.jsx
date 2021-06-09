@@ -68,8 +68,7 @@ Button.propTypes = {
   /**
    * The icon is in the beginning.
    */
-  //TODO: check if it's necessary
-  start: PropTypes.bool,
+  // start: PropTypes.bool,
   /**
    * The icon is in the end,
    */
@@ -87,7 +86,7 @@ Button.defaultProps = {
   round: false,
   thick: false,
   convex: false,
-  start: false,
+  // start: false,
   end: false,
   onClick: undefined,
 };

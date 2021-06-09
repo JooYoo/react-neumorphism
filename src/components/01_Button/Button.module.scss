@@ -67,6 +67,10 @@
 .var {
   &__shape--round {
     border-radius: $border-radius--round;
+
+    &:active {
+      border-radius: $border-radius--round;
+    }
   }
 
   &__shape--convex {

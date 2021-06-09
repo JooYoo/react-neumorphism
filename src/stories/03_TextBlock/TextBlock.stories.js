@@ -7,9 +7,42 @@ export default {
   title: 'Text/TextBlock',
   component: TextBlock,
   argTypes: {
+    children: {
+      table: {
+        category: 'Content',
+      },
+    },
+    title: {
+      table: {
+        category: 'Content',
+      },
+    },
+    titleIcon: {
+      table: {
+        category: 'Content',
+      },
+    },
+    oneline: {
+      table: {
+        category: 'Content',
+      },
+    },
     size: {
       options: ['small', 'middle', 'large'],
       control: { type: 'radio' },
+      table: {
+        category: 'Size',
+      },
+    },
+    right: {
+      table: {
+        category: 'Alignment',
+      },
+    },
+    center: {
+      table: {
+        category: 'Alignment',
+      },
     },
   },
   parameters: {

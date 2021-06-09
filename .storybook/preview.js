@@ -8,11 +8,11 @@ export const parameters = {
   },
   layout: 'centered',
   backgrounds: {
-    // default: 'neu-bg',
+    default: 'neu-bg',
     values: [
       {
         name: 'neu-bg',
-        value: 'rgba(239, 238, 238, 1)',
+        value: 'rgba(247, 247, 247, 1)',
       },
     ],
   },
