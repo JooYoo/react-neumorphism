@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './TextBox.module.scss';
 
 const TextBox = (props) => {
@@ -53,3 +54,31 @@ const TextBox = (props) => {
 };
 
 export default TextBox;
+
+/* ---------------------------------- Types --------------------------------- */
+
+TextBox.propTypes = {
+  // TODO: description
+  large: PropTypes.bool,
+  // TODO: font lost in sb
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+  description: PropTypes.string,
+  textarea: PropTypes.bool,
+  valid: PropTypes.bool,
+  invalid: PropTypes.bool,
+  disable: PropTypes.bool,
+  icon: PropTypes.element,
+};
+
+TextBox.defaultProps = {
+  large: false,
+  label: '',
+  placeholder: '...',
+  description: '',
+  textarea: '',
+  valid: false,
+  invalid: false,
+  disable: false,
+  icon: undefined,
+};
