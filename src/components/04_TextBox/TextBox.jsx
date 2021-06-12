@@ -58,23 +58,50 @@ export default TextBox;
 /* ---------------------------------- Types --------------------------------- */
 
 TextBox.propTypes = {
-  // TODO: description
+  /**
+   * The size of the TextBox. Default is middle.
+   */
   large: PropTypes.bool,
-  // TODO: font lost in sb
+  /**
+   * The label of the TextBox
+   */
   label: PropTypes.string,
+  /**
+   * The placeholder in the TextBox
+   */
   placeholder: PropTypes.string,
+  /**
+   * The description under the TextBox
+   */
   description: PropTypes.string,
+  /**
+   * Turn the TextBox to a textarea, resizable vertically
+   */
   textarea: PropTypes.bool,
+  /**
+   * Display data valid layout
+   */
   valid: PropTypes.bool,
+  /**
+   * Diaply data invalid layout
+   */
   invalid: PropTypes.bool,
+  /**
+   * The TextBox is disable.
+   */
   disable: PropTypes.bool,
+  /**
+   * `react-icons` as rendered component
+   */
   icon: PropTypes.element,
 };
+
+// TODO: fix the font
 
 TextBox.defaultProps = {
   large: false,
   label: '',
-  placeholder: '...',
+  placeholder: '',
   description: '',
   textarea: '',
   valid: false,

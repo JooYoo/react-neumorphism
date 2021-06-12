@@ -14,9 +14,9 @@ const Template = (args) => <TextBox {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   large: false,
-  label: null,
-  placeholder: '...',
-  description: '',
+  label: 'User name ...',
+  placeholder: 'User name ...',
+  description: 'Please enter your user name',
   textarea: '',
   valid: false,
   invalid: false,
