@@ -96,8 +96,6 @@ TextBox.propTypes = {
   icon: PropTypes.element,
 };
 
-// TODO: fix the font
-
 TextBox.defaultProps = {
   large: false,
   label: '',
