@@ -54,3 +54,5 @@ WithIcon.parameters = {
     },
   },
 };
+
+//TODO: fix the component width in each
