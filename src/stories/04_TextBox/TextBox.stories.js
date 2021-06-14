@@ -55,4 +55,33 @@ WithIcon.parameters = {
   },
 };
 
+// story: Textarea
+export const Textarea = Template.bind({});
+Textarea.args = {
+  ...Default.args,
+  placeholder: 'Enter long text...',
+  textarea: true,
+};
+Textarea.parameters = {
+  docs: {
+    description: {
+      story: 'The textbox can be expended vertically',
+    },
+  },
+};
+
+// story: Disable
+export const Disable = Template.bind({});
+Disable.args = {
+  ...Default.args,
+  disable: true,
+};
+Disable.parameters = {
+  docs: {
+    description: {
+      story: 'The textbox can be expended vertically',
+    },
+  },
+};
+
 //TODO: fix the component width in each
