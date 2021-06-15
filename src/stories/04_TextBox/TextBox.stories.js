@@ -84,4 +84,32 @@ Disable.parameters = {
   },
 };
 
+// story: Valid
+export const Valid = Template.bind({});
+Valid.args = {
+  ...Default.args,
+  valid: true,
+};
+Valid.parameters = {
+  docs: {
+    description: {
+      story: 'The content of the TextBox is valid.',
+    },
+  },
+};
+
+// story: Invalid
+export const Invalid = Template.bind({});
+Invalid.args = {
+  ...Default.args,
+  invalid: true,
+};
+Invalid.parameters = {
+  docs: {
+    description: {
+      story: 'The content of the TextBox is invalid.',
+    },
+  },
+};
+
 //TODO: fix the component width in each
