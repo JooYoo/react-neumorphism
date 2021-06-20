@@ -62,6 +62,10 @@ $text-box__input-box__padding--left--l: 4.8rem;
   resize: vertical;
   font-size: $textarea__font-size;
   font: caption;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .description {
